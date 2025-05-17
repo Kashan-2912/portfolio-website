@@ -12,7 +12,6 @@ const CustomLink = ({ href, title, className = "" }) => {
 
   const isActive = pathname === href;
 
-  console.log(router);
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}

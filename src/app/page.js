@@ -9,11 +9,14 @@ export default function Home() {
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
-              <Image alt="Kashan" src="/ME.png" width={400} height={300} />
+              <div className="relative w-full h-screen">
+                <Image alt="Kashan" src="/ME.png" fill className="object-contain" />
+              </div>
+
             </div>
 
-            <div className="w-1/2">
-              <h1>Turning Vision Into Reality With Code And Design.</h1>
+            <div className="w-1/2 flex flex-col items-center self-center">
+              <AnimatedText text="Turning Vision Into Reality With Code And Design." className="!text-6xl !text-left" />
               <p>As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
                 Explore my latest projects and articles, showcasing my expertise in React.js and web development.</p>
             </div>
