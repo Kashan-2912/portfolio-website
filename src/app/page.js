@@ -6,8 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="flex items-center text-dark w-full min-h-screen font-montserrat">
+    <main className="flex items-center text-dark w-full min-h-screen font-montserrat">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
@@ -28,14 +27,13 @@ export default function Home() {
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:text-dark hover:bg-light border-2 border-solid border-transparent hover:border-dark"
                   download={true}
                 >Resume <LinkArrow className={"w-6 ml-1"} /></Link>
-                <Link href="mailto:mkashan2912@gmail.com" target="_blank" 
-                className="ml-4 text-lg font-medium capitalize text-dark underline"
+                <Link href="mailto:mkashan2912@gmail.com" target="_blank"
+                  className="ml-4 text-lg font-medium capitalize text-dark underline"
                 >Contact</Link>
               </div>
             </div>
           </div>
         </Layout>
-      </h1>
-    </div>
+    </main>
   );
 }
