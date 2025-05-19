@@ -76,3 +76,90 @@ body {
     animation: wiggle 1s ease-in-out infinite, pulse 2s ease-in-out infinite;
   }
 }
+
+@layer utilities {
+  @keyframes float-glow {
+    0%, 100% {
+      transform: translateY(0);
+      filter: drop-shadow(0 0 4px #0ea5e9); /* sky-500 glow */
+    }
+    50% {
+      transform: translateY(-4px);
+      filter: drop-shadow(0 0 8px #0ea5e9);
+    }
+  }
+
+  .animate-float-glow {
+    animation: float-glow 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes click-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-click-pulse {
+    animation: click-pulse 1.5s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes hover-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .hover\:animate-rotate:hover {
+    animation: hover-rotate 1s linear;
+  }
+}
+
+@layer utilities {
+  @keyframes glow-wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+      filter: drop-shadow(0 0 4px #0ea5e9); /* sky-500 glow */
+    }
+    50% {
+      transform: rotate(3deg);
+      filter: drop-shadow(0 0 8px #0ea5e9);
+    }
+  }
+
+  .animate-glow-wiggle {
+    animation: glow-wiggle 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .hover\:pause-animation:hover {
+    animation-play-state: paused;
+  }
+}
+
+@layer utilities {
+  @keyframes glow-ping {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+      filter: drop-shadow(0 0 0px #38bdf8); /* sky-400 */
+    }
+    70% {
+      transform: scale(1.3);
+      opacity: 0;
+      filter: drop-shadow(0 0 8px #38bdf8);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+      filter: drop-shadow(0 0 0px #38bdf8);
+    }
+  }
+
+  .animate-glow-ping {
+    animation: glow-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}
