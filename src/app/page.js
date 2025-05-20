@@ -1,3 +1,4 @@
+import AnimatedDivLogo from "@/components/AnimatedDivLogo";
 import AnimatedText from "@/components/AnimatedText";
 import HireMe from "@/components/HireMe";
 import { LinkArrow } from "@/components/Icons";
@@ -11,7 +12,7 @@ export default function Home() {
       <Layout className="pt-0">
         <div className="flex items-center justify-between w-full">
           <div className="w-1/2">
-            <div className="relative w-full h-screen">
+            <div className="relative w-full h-[560px]">
               <Image alt="Kashan" src="/ME.png" fill className="object-contain" />
             </div>
 
@@ -36,18 +37,7 @@ export default function Home() {
         </div>
       </Layout>
       <HireMe />
-
-      {/* <div className="absolute right-8 bottom-8 inline-block w-24 animate-pulse-wiggle hover:pause-animation">
-        <img alt="Kashan" src="/dev.svg" className="w-full h-auto" />
-      </div> */}
-
-      <div className="absolute right-8 bottom-8 inline-block w-24">
-        <span className="relative flex items-center justify-center w-10 h-10">
-          <span className="absolute inline-flex h-full w-full animate-ping hover:pause-animation rounded-full bg-sky-400 opacity-75"></span>
-          <img alt="Kashan" src="/dev.svg" className="w-full h-auto" />
-        </span>
-      </div>
-
+      <AnimatedDivLogo />
     </main>
   );
 }
