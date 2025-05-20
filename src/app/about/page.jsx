@@ -1,6 +1,7 @@
 import AnimatedNumber from "@/components/AnimatedNumber";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
@@ -76,6 +77,8 @@ const page = () => {
 
             </div>
           </div>
+
+        <Skills />
         </Layout>
       </main>
     </>
