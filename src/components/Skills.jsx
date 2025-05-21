@@ -58,6 +58,8 @@ const Skills = () => {
           <Skill key={index} name={skill.name} x={skill.x} y={skill.y} />
         ))}
       </div>
+
+      {/* more skills ... */}
     </>
   );
 };
