@@ -1,5 +1,6 @@
 import AnimatedNumber from "@/components/AnimatedNumber";
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import Head from "next/head";
@@ -79,6 +80,7 @@ const page = () => {
           </div>
 
         <Skills />
+        <Experience />
         </Layout>
       </main>
     </>
