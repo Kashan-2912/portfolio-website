@@ -1,0 +1,190 @@
+import AnimatedText from "@/components/AnimatedText";
+import { GithubIcon } from "@/components/Icons";
+import Layout from "@/components/Layout";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const FeatureProject = ({ type, title, summary, img, link, github }) => {
+  return (
+    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12">
+      <Link
+        href={link}
+        target="_blank"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+      >
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-auto object-cover"
+        />
+      </Link>
+
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+        <span className="text-primary font-medium text-xl">{type}</span>
+
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+        </Link>
+
+        <p className="my-2 font-medium text-dark">{summary}</p>
+
+        <div className="mt-2 flex items-center">
+          <Link href={github} target="_blank" className="w-10">
+            <GithubIcon />
+          </Link>
+
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
+          >
+            Visit Project
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+const Project = ({ type, title, img, link, github }) => {
+  return (
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light shadow-2xl p-6 relative">
+      <Link
+        href={link}
+        target="_blank"
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      >
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-auto object-cover"
+        />
+      </Link>
+
+      <div className="w-full flex flex-col items-start justify-between pl-6">
+        <span className="text-primary font-medium text-xl">{type}</span>
+
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+        </Link>
+
+        <div className="mt-2 flex items-center">
+          <Link href={github} target="_blank" className="w-10">
+            <GithubIcon />
+          </Link>
+
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
+          >
+            Visit
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+const page = () => {
+  return (
+    <>
+      <Head>
+        <title>Kashan | Projects Page</title>
+        <meta
+          name="description"
+          content="Is your website struggling to load quickly? You've come to the right profile. When you connect with Muhammad Kashan Ashraf, you're not just hiring a developer or a designer—you're gaining a partner committed to bringing your vision to life. With a rich blend of technical skills and creative design expertise, I ensure that every project is functional, visually stunning, and user-friendly. My holistic approach provides comprehensive solutions tailored to your specific needs. Clear communication, timely delivery, and exceptional quality are the hallmarks of my work. Partnering with me means your project is in capable hands, driving your business forward with innovative and efficient digital solutions. Discover List of projects Kashan has made."
+        />
+      </Head>
+
+      <main className="w-full mb-16 flex flex-col items-center justify-center">
+        <Layout className={"pt-16"}>
+          <AnimatedText
+            text="Imagination Trumps Knowledge!"
+            className="mb-16"
+          />
+
+          <div className="grid grid-cols-12 gap-24">
+            <div className="col-span-12">
+              <FeatureProject
+                type="Featured Project"
+                title="Crypto Screener Application"
+                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
+It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
+local currency."
+                img="/image.png"
+                link="https://github.com/Kashan-2912"
+                github="https://github.com/Kashan-2912"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Crypto Screener Application"
+                img="/image.png"
+                link="https://github.com/Kashan-2912"
+                github="https://github.com/Kashan-2912"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Crypto Screener Application"
+                img="/image.png"
+                link="https://github.com/Kashan-2912"
+                github="https://github.com/Kashan-2912"
+              />
+            </div>
+
+            <div className="col-span-12">
+              <FeatureProject
+                type="Featured Project"
+                title="Crypto Screener Application"
+                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
+It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
+local currency."
+                img="/image.png"
+                link="https://github.com/Kashan-2912"
+                github="https://github.com/Kashan-2912"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Crypto Screener Application"
+                img="/image.png"
+                link="https://github.com/Kashan-2912"
+                github="https://github.com/Kashan-2912"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Crypto Screener Application"
+                img="/image.png"
+                link="https://github.com/Kashan-2912"
+                github="https://github.com/Kashan-2912"
+              />
+            </div>
+          </div>
+        </Layout>
+      </main>
+    </>
+  );
+};
+
+export default page;
