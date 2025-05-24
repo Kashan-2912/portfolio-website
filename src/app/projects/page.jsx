@@ -8,17 +8,15 @@ import React from "react";
 
 const FeatureProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12">
+    <article className="w-full flex items-center justify-between relative rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-12">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark" />
+
       <Link
         href={link}
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <img
-          src={img}
-          alt={title}
-          className="w-full h-auto object-cover"
-        />
+        <img src={img} alt={title} className="w-full h-auto object-cover" />
       </Link>
 
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -55,19 +53,16 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
 const Project = ({ type, title, img, link, github }) => {
   return (
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light shadow-2xl p-6 relative">
+        <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark" />
       <Link
         href={link}
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <img
-          src={img}
-          alt={title}
-          className="w-full h-auto object-cover"
-        />
+        <img src={img} alt={title} className="w-full h-auto object-cover" />
       </Link>
 
-      <div className="w-full flex flex-col items-start justify-between pl-6">
+      <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl">{type}</span>
 
         <Link
@@ -75,20 +70,20 @@ const Project = ({ type, title, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
         </Link>
 
-        <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10">
-            <GithubIcon />
-          </Link>
-
+        <div className="w-full mt-2 flex items-center justify-between">
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
+            className="rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
           >
             Visit
+          </Link>
+
+          <Link href={github} target="_blank" className="w-8">
+            <GithubIcon />
           </Link>
         </div>
       </div>
@@ -114,7 +109,7 @@ const page = () => {
             className="mb-16"
           />
 
-          <div className="grid grid-cols-12 gap-24">
+          <div className="grid grid-cols-12 gap-24 gap-y-32">
             <div className="col-span-12">
               <FeatureProject
                 type="Featured Project"
