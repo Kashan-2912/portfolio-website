@@ -2,11 +2,16 @@ import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiNodedotjs,
+} from "react-icons/si";
 
-const FeatureProject = ({ type, title, summary, img, link, github }) => {
+const FeatureProject = ({ type, title, summary, img, link, github, tech }) => {
   return (
     <article className="w-full flex items-center justify-between relative rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-12">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] rounded-br-3xl bg-dark" />
@@ -16,7 +21,11 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <img src={img} alt={title} className="w-full h-auto hover:scale-108 quick duration-300" />
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-auto hover:scale-108 quick duration-300"
+        />
       </Link>
 
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -31,6 +40,14 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
         </Link>
 
         <p className="my-2 font-medium text-dark">{summary}</p>
+
+        <div className="flex flex-wrap gap-2 my-2">
+          {tech.map((Icon, index) => (
+            <div key={index} className="bg-light p-2 rounded-full shadow-sm">
+              <Icon className="w-5 h-5" />
+            </div>
+          ))}
+        </div>
 
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
@@ -59,7 +76,11 @@ const Project = ({ type, title, img, link, github }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <img src={img} alt={title} className="w-full h-auto object-cover hover:scale-108 quick duration-300" />
+        <img
+          src={img}
+          alt={title}
+          className="w-full h-auto object-cover hover:scale-108 quick duration-300"
+        />
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-4">
@@ -118,6 +139,7 @@ const page = () => {
                 img="/smartflex.png"
                 link="http://smartflex-xi.vercel.app/"
                 github="https://github.com/Kashan-2912/smartflex"
+                tech={[SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs]}
               />
             </div>
 
@@ -149,6 +171,7 @@ const page = () => {
                 img="/vizio.png"
                 link="https://vizio-room-designer.vercel.app/"
                 github="https://github.com/Kashan-2912/ai-interior-designer"
+                tech={[SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs]}
               />
             </div>
 
@@ -200,6 +223,7 @@ const page = () => {
                 img="/clario.png"
                 link="https://clario-roan.vercel.app/"
                 github="https://github.com/rasenga223/clariodocs-api-documentation-generator"
+                tech={[SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs]}
               />
             </div>
           </div>
