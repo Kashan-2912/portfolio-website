@@ -4,12 +4,6 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiNodedotjs,
-} from "react-icons/si";
 
 const FeatureProject = ({ type, title, summary, img, link, github, tech }) => {
   return (
@@ -41,33 +35,37 @@ const FeatureProject = ({ type, title, summary, img, link, github, tech }) => {
 
         <p className="my-2 font-medium text-dark">{summary}</p>
 
-        <div className="flex flex-wrap gap-2 my-2">
-          {tech.map((Icon, index) => (
-            <div key={index} className="bg-light p-2 rounded-full shadow-sm">
-              <Icon className="w-5 h-5" />
-            </div>
-          ))}
-        </div>
+        <div className="mt-2 flex items-center justify-between w-full">
+          {/* Left Side: GitHub + Button */}
+          <div className="flex items-center">
+            <Link href={github} target="_blank" className="w-10">
+              <GithubIcon />
+            </Link>
 
-        <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10">
-            <GithubIcon />
-          </Link>
+            <Link
+              href={link}
+              target="_blank"
+              className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
+            >
+              Visit Project
+            </Link>
+          </div>
 
-          <Link
-            href={link}
-            target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
-          >
-            Visit Project
-          </Link>
+          {/* Right Side: Chips */}
+          <div className="flex flex-wrap gap-2">
+            {tech.map((Icon, index) => (
+              <div key={index}>
+                <img src={Icon} alt="Tech Logo" width={50} height={50} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </article>
   );
 };
 
-const Project = ({ type, title, img, link, github }) => {
+const Project = ({ type, title, img, link, github, tech }) => {
   return (
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light shadow-2xl p-6 relative">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark" />
@@ -86,6 +84,14 @@ const Project = ({ type, title, img, link, github }) => {
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl">{type}</span>
 
+        <div className="flex flex-wrap gap-2">
+            {tech.map((Icon, index) => (
+              <div key={index}>
+                <img src={Icon} alt="Tech Logo" width={50} height={50} />
+              </div>
+            ))}
+          </div>
+
         <Link
           href={link}
           target="_blank"
@@ -102,6 +108,8 @@ const Project = ({ type, title, img, link, github }) => {
           >
             Visit
           </Link>
+
+          
 
           <Link href={github} target="_blank" className="w-8">
             <GithubIcon />
@@ -139,7 +147,7 @@ const page = () => {
                 img="/smartflex.png"
                 link="http://smartflex-xi.vercel.app/"
                 github="https://github.com/Kashan-2912/smartflex"
-                tech={[SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs]}
+                tech={["/nextjs.svg", "/gemini.svg", "/tailwindcss.svg", "/clerk.svg", "/shadcn.svg"]}
               />
             </div>
 
@@ -150,16 +158,18 @@ const page = () => {
                 img="/artlab.png"
                 link="https://artlab-seven.vercel.app/"
                 github="https://github.com/Kashan-2912/artlab"
+                tech={["/nextjs.svg", "/tailwindcss.svg", "/gemini.svg", "/appwrite.svg", "/framermotion.svg", "/shadcn.svg"]}
               />
             </div>
 
-            <div className="col-span-6">
+             <div className="col-span-6">
               <Project
                 type="e-LMS"
                 title="Learnify"
                 img="/learnify.png"
                 link="https://learnify-skillup.netlify.app/"
                 github="https://github.com/Kashan-2912/Learnify-Skillup"
+                tech={["/react.svg", "/tailwindcss.svg", "/firebase.svg"]}
               />
             </div>
 
@@ -171,17 +181,18 @@ const page = () => {
                 img="/vizio.png"
                 link="https://vizio-room-designer.vercel.app/"
                 github="https://github.com/Kashan-2912/ai-interior-designer"
-                tech={[SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs]}
+                tech={["/nextjs.svg", "/tailwindcss.svg", "/clerk.svg", "/replicate.svg", "/neondb.svg", "/appwrite.svg", "/paddle.svg"]}
               />
             </div>
 
-            <div className="col-span-6">
+             <div className="col-span-6">
               <Project
                 type="e-Commerce Website"
                 title="EzyShopper"
                 img="/ezyshopper.png"
                 link="https://ezyshopper.up.railway.app/"
                 github="https://github.com/Kashan-2912/EzyShopper"
+                tech={["/mongodb.svg", "/express.svg", "/react.svg", "/node.svg", "/tailwindcss.svg", "/redis.svg", "/stripe.svg"]}
               />
             </div>
 
@@ -192,6 +203,7 @@ const page = () => {
                 img="/moodify.png"
                 link="https://moodify-moods.netlify.app/"
                 github="https://github.com/Kashan-2912/Moodify"
+                tech={["/nextjs.svg", "/react.svg", "/firebase.svg", "/tailwindcss.svg"]}
               />
             </div>
 
@@ -202,6 +214,7 @@ const page = () => {
                 img="/filmpire.png"
                 link="https://filmpire-movies-app.netlify.app/"
                 github="https://github.com/Kashan-2912/Filmpire-Movie-App"
+                tech={["/react.svg", "/css.svg"]}
               />
             </div>
 
@@ -212,6 +225,7 @@ const page = () => {
                 img="/cyberfiction.png"
                 link="https://cyberfiction-clone1.netlify.app/"
                 github="https://github.com/Kashan-2912/Cyberfiction-clone"
+                tech={["/html.svg", "/javascript.svg", "/css.svg", "/gsap.svg"]}
               />
             </div>
 
@@ -223,7 +237,7 @@ const page = () => {
                 img="/clario.png"
                 link="https://clario-roan.vercel.app/"
                 github="https://github.com/rasenga223/clariodocs-api-documentation-generator"
-                tech={[SiNextdotjs, SiTailwindcss, SiTypescript, SiNodedotjs]}
+                tech={["/nextjs.svg", "/tailwindcss.svg", "/supabase.svg", "/framermotion.svg", "/shadcn.svg", "/chatgpt.svg"]}
               />
             </div>
           </div>
