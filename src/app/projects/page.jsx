@@ -16,7 +16,7 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <img src={img} alt={title} className="w-full h-auto object-cover" />
+        <img src={img} alt={title} className="w-full h-auto hover:scale-108 quick duration-300" />
       </Link>
 
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -53,13 +53,13 @@ const FeatureProject = ({ type, title, summary, img, link, github }) => {
 const Project = ({ type, title, img, link, github }) => {
   return (
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light shadow-2xl p-6 relative">
-        <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark" />
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark" />
       <Link
         href={link}
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <img src={img} alt={title} className="w-full h-auto object-cover" />
+        <img src={img} alt={title} className="w-full h-auto object-cover hover:scale-108 quick duration-300" />
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-4">
@@ -113,66 +113,93 @@ const page = () => {
             <div className="col-span-12">
               <FeatureProject
                 type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-local currency."
-                img="/image.png"
-                link="https://github.com/Kashan-2912"
-                github="https://github.com/Kashan-2912"
+                title="SmartFlex"
+                summary="SmartFlex is an AI-powered fitness training app that generates personalized workout and diet plans in real-time through voice interaction. Built with cutting-edge tools like NextJS, TailwindCSS, Vapi AI, Gemini, Convex, and Clerk, SmartFlex is your go-to fitness companion – for FREE!"
+                img="/smartflex.png"
+                link="http://smartflex-xi.vercel.app/"
+                github="https://github.com/Kashan-2912/smartflex"
               />
             </div>
 
             <div className="col-span-6">
               <Project
-                type="Featured Project"
-                title="Crypto Screener Application"
-                img="/image.png"
-                link="https://github.com/Kashan-2912"
-                github="https://github.com/Kashan-2912"
+                type="Text to Image"
+                title="ArtLab"
+                img="/artlab.png"
+                link="https://artlab-seven.vercel.app/"
+                github="https://github.com/Kashan-2912/artlab"
               />
             </div>
 
             <div className="col-span-6">
               <Project
-                type="Featured Project"
-                title="Crypto Screener Application"
-                img="/image.png"
-                link="https://github.com/Kashan-2912"
-                github="https://github.com/Kashan-2912"
+                type="e-LMS"
+                title="Learnify"
+                img="/learnify.png"
+                link="https://learnify-skillup.netlify.app/"
+                github="https://github.com/Kashan-2912/Learnify-Skillup"
               />
             </div>
 
             <div className="col-span-12">
               <FeatureProject
-                type="Featured Project"
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-local currency."
-                img="/image.png"
-                link="https://github.com/Kashan-2912"
-                github="https://github.com/Kashan-2912"
+                type="AI Project"
+                title="VizioRoom"
+                summary="AI Powered Interior Designer where users can upload screenshot of any type of room and get redesigned room with AI results based on custom pre defined options. Built with NextJS, TailwindCSS, Clerk, Replicate, NeonDB, Appwrite, Paddle Payments."
+                img="/vizio.png"
+                link="https://vizio-room-designer.vercel.app/"
+                github="https://github.com/Kashan-2912/ai-interior-designer"
               />
             </div>
 
             <div className="col-span-6">
               <Project
-                type="Featured Project"
-                title="Crypto Screener Application"
-                img="/image.png"
-                link="https://github.com/Kashan-2912"
-                github="https://github.com/Kashan-2912"
+                type="e-Commerce Website"
+                title="EzyShopper"
+                img="/ezyshopper.png"
+                link="https://ezyshopper.up.railway.app/"
+                github="https://github.com/Kashan-2912/EzyShopper"
               />
             </div>
 
             <div className="col-span-6">
               <Project
-                type="Featured Project"
-                title="Crypto Screener Application"
-                img="/image.png"
-                link="https://github.com/Kashan-2912"
-                github="https://github.com/Kashan-2912"
+                type="NextJS Project"
+                title="Moodify"
+                img="/moodify.png"
+                link="https://moodify-moods.netlify.app/"
+                github="https://github.com/Kashan-2912/Moodify"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                type="Movies Website"
+                title="Filmpire"
+                img="/filmpire.png"
+                link="https://filmpire-movies-app.netlify.app/"
+                github="https://github.com/Kashan-2912/Filmpire-Movie-App"
+              />
+            </div>
+
+            <div className="col-span-6">
+              <Project
+                type="GSAP Project"
+                title="Cyberfiction Clone"
+                img="/cyberfiction.png"
+                link="https://cyberfiction-clone1.netlify.app/"
+                github="https://github.com/Kashan-2912/Cyberfiction-clone"
+              />
+            </div>
+
+            <div className="col-span-12">
+              <FeatureProject
+                type="OPEN SOURCE CONTRIBUTION"
+                title="Clario Docs"
+                summary="Transform Your API Specs into Beautiful Docs. Upload your OpenAPI or Postman collection and let our AI transform it into comprehensive, beautiful documentation in seconds. No coding required. Built with NextJS, TailwindCSS, MDX-React, Supabase, Framer Motion, OpenRouter API."
+                img="/clario.png"
+                link="https://clario-roan.vercel.app/"
+                github="https://github.com/rasenga223/clariodocs-api-documentation-generator"
               />
             </div>
           </div>
