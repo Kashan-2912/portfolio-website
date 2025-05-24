@@ -38,7 +38,11 @@ const FeatureProject = ({ type, title, summary, img, link, github, tech }) => {
         <div className="mt-2 flex items-center justify-between w-full">
           {/* Left Side: GitHub + Button */}
           <div className="flex items-center">
-            <Link href={github} target="_blank" className="w-10">
+            <Link
+              href={github}
+              target="_blank"
+              className="w-10 hover:scale-130 duration-300 quick"
+            >
               <GithubIcon />
             </Link>
 
@@ -47,15 +51,15 @@ const FeatureProject = ({ type, title, summary, img, link, github, tech }) => {
               target="_blank"
               className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark duration-300 quick"
             >
-              Visit Project
+              Visit
             </Link>
           </div>
 
           {/* Right Side: Chips */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center flex-wrap gap-1">
             {tech.map((Icon, index) => (
-              <div key={index}>
-                <img src={Icon} alt="Tech Logo" width={50} height={50} />
+              <div key={index} className="rounded-full p-1 hover:scale-130 duration-300 quick">
+                <img src={Icon} alt="Tech" className="w-8 h-8 object-contain" />
               </div>
             ))}
           </div>
@@ -82,15 +86,21 @@ const Project = ({ type, title, img, link, github, tech }) => {
       </Link>
 
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl">{type}</span>
-
-        <div className="flex flex-wrap gap-2">
+        <div className="w-full flex items-center justify-between mb-1 mt-2">
+          <span className="text-primary font-medium text-xl whitespace-nowrap">
+            {type}
+          </span>
+          <div className="flex items-center flex-wrap gap-1">
             {tech.map((Icon, index) => (
-              <div key={index}>
-                <img src={Icon} alt="Tech Logo" width={50} height={50} />
+              <div
+                key={index}
+                className="rounded-full p-1 hover:scale-130 duration-300 quick"
+              >
+                <img src={Icon} alt="Tech" className="w-8 h-8 object-contain" />
               </div>
             ))}
           </div>
+        </div>
 
         <Link
           href={link}
@@ -109,9 +119,11 @@ const Project = ({ type, title, img, link, github, tech }) => {
             Visit
           </Link>
 
-          
-
-          <Link href={github} target="_blank" className="w-8">
+          <Link
+            href={github}
+            target="_blank"
+            className="w-8 hover:scale-130 duration-300 quick"
+          >
             <GithubIcon />
           </Link>
         </div>
@@ -147,7 +159,13 @@ const page = () => {
                 img="/smartflex.png"
                 link="http://smartflex-xi.vercel.app/"
                 github="https://github.com/Kashan-2912/smartflex"
-                tech={["/nextjs.svg", "/gemini.svg", "/tailwindcss.svg", "/clerk.svg", "/shadcn.svg"]}
+                tech={[
+                  "/nextjs.svg",
+                  "/gemini.svg",
+                  "/tailwindcss.svg",
+                  "/clerk.svg",
+                  "/shadcn.svg",
+                ]}
               />
             </div>
 
@@ -158,11 +176,18 @@ const page = () => {
                 img="/artlab.png"
                 link="https://artlab-seven.vercel.app/"
                 github="https://github.com/Kashan-2912/artlab"
-                tech={["/nextjs.svg", "/tailwindcss.svg", "/gemini.svg", "/appwrite.svg", "/framermotion.svg", "/shadcn.svg"]}
+                tech={[
+                  "/nextjs.svg",
+                  "/tailwindcss.svg",
+                  "/gemini.svg",
+                  "/appwrite.svg",
+                  "/framermotion.svg",
+                  "/shadcn.svg",
+                ]}
               />
             </div>
 
-             <div className="col-span-6">
+            <div className="col-span-6">
               <Project
                 type="e-LMS"
                 title="Learnify"
@@ -181,18 +206,34 @@ const page = () => {
                 img="/vizio.png"
                 link="https://vizio-room-designer.vercel.app/"
                 github="https://github.com/Kashan-2912/ai-interior-designer"
-                tech={["/nextjs.svg", "/tailwindcss.svg", "/clerk.svg", "/replicate.svg", "/neondb.svg", "/appwrite.svg", "/paddle.svg"]}
+                tech={[
+                  "/nextjs.svg",
+                  "/tailwindcss.svg",
+                  "/clerk.svg",
+                  "/replicate.svg",
+                  "/neondb.svg",
+                  "/appwrite.svg",
+                  "/paddle.svg",
+                ]}
               />
             </div>
 
-             <div className="col-span-6">
+            <div className="col-span-6">
               <Project
-                type="e-Commerce Website"
+                type="e-Commerce"
                 title="EzyShopper"
                 img="/ezyshopper.png"
                 link="https://ezyshopper.up.railway.app/"
                 github="https://github.com/Kashan-2912/EzyShopper"
-                tech={["/mongodb.svg", "/express.svg", "/react.svg", "/node.svg", "/tailwindcss.svg", "/redis.svg", "/stripe.svg"]}
+                tech={[
+                  "/mongodb.svg",
+                  "/express.svg",
+                  "/react.svg",
+                  "/node.svg",
+                  "/tailwindcss.svg",
+                  "/redis.svg",
+                  "/stripe.svg",
+                ]}
               />
             </div>
 
@@ -203,7 +244,12 @@ const page = () => {
                 img="/moodify.png"
                 link="https://moodify-moods.netlify.app/"
                 github="https://github.com/Kashan-2912/Moodify"
-                tech={["/nextjs.svg", "/react.svg", "/firebase.svg", "/tailwindcss.svg"]}
+                tech={[
+                  "/nextjs.svg",
+                  "/react.svg",
+                  "/firebase.svg",
+                  "/tailwindcss.svg",
+                ]}
               />
             </div>
 
@@ -237,7 +283,14 @@ const page = () => {
                 img="/clario.png"
                 link="https://clario-roan.vercel.app/"
                 github="https://github.com/rasenga223/clariodocs-api-documentation-generator"
-                tech={["/nextjs.svg", "/tailwindcss.svg", "/supabase.svg", "/framermotion.svg", "/shadcn.svg", "/chatgpt.svg"]}
+                tech={[
+                  "/nextjs.svg",
+                  "/tailwindcss.svg",
+                  "/supabase.svg",
+                  "/framermotion.svg",
+                  "/shadcn.svg",
+                  "/chatgpt.svg",
+                ]}
               />
             </div>
           </div>
