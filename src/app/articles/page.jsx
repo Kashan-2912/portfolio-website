@@ -5,6 +5,8 @@ import Link from "next/link";
 import React from "react";
 import { fetchMediumArticles } from "@/lib/fetchMedium";
 import Image from "next/image";
+import { AnimatePresence } from "framer-motion";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const Article = ({ img, title, time, summary, link, categories }) => {
   return (
@@ -59,6 +61,8 @@ export default async function Page() {
           content="Is your website struggling to load quickly? You've come to the right profile. When you connect with Muhammad Kashan Ashraf, you're not just hiring a developer or a designer—you're gaining a partner committed to bringing your vision to life... On this page, you will see articles written by Muhammad Kashan Ashraf."
         />
       </Head>
+
+      <TransitionEffect />
 
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <Layout className={"pt-16"}>

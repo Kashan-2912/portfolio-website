@@ -1,9 +1,13 @@
+"use client"
+
 import AnimatedNumber from "@/components/AnimatedNumber";
 import AnimatedText from "@/components/AnimatedText";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
+import TransitionEffect from "@/components/TransitionEffect";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
@@ -18,6 +22,8 @@ const page = () => {
           content="Is your website struggling to load quickly? You've come to the right profile. When you connect with Muhammad Kashan Ashraf, you're not just hiring a developer or a designer—you're gaining a partner committed to bringing your vision to life. With a rich blend of technical skills and creative design expertise, I ensure that every project is functional, visually stunning, and user-friendly. My holistic approach provides comprehensive solutions tailored to your specific needs. Clear communication, timely delivery, and exceptional quality are the hallmarks of my work. Partnering with me means your project is in capable hands, driving your business forward with innovative and efficient digital solutions."
         />
       </Head>
+
+      <TransitionEffect />
 
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className={"pt-16"}>
