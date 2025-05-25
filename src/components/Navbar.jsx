@@ -38,40 +38,48 @@ const Navbar = () => {
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap">
-        <motion.a href="google.com" target="_blank"
+        <motion.a href="https://x.com/itzKashan2912" target="_blank"
         whileHover={{y: -2}}
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
           <img src="/x.svg" alt="X" />
         </motion.a>
-        <motion.a href="google.com" target="_blank"
+        <motion.a href="https://github.com/Kashan-2912/" target="_blank"
         whileHover={{y: -2}}
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
           <GithubIcon />
         </motion.a>
-        <motion.a href="google.com" target="_blank"
+        <motion.a href="https://www.linkedin.com/in/muhammad-kashan-ashraf/" target="_blank"
         whileHover={{y: -2}}
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
           <LinkedInIcon />
         </motion.a>
-        <motion.a href="google.com" target="_blank"
+        <motion.a href="https://itzkashan.medium.com/" target="_blank"
         whileHover={{y: -2}}
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
           <img src="/medium.svg" alt="X" />
         </motion.a>
-        <motion.a href="google.com" target="_blank"
+        <motion.a href="https://dribbble.com/Kashan2912" target="_blank"
         whileHover={{y: -2}}
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
           <DribbbleIcon />
+        </motion.a>
+
+        <motion.a href="https://www.upwork.com/freelancers/~01ec288c31651818ea" target="_blank"
+        whileHover={{y: -2}}
+        whileTap={{scale: 0.9}}
+        className="w-6 mx-3"
+        >
+          <img src="/upwork.svg" alt="X" />
         </motion.a>
       </nav>
 
