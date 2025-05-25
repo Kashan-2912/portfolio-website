@@ -43,7 +43,7 @@ const Navbar = () => {
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
-          <TwitterIcon />
+          <img src="/x.svg" alt="X" />
         </motion.a>
         <motion.a href="google.com" target="_blank"
         whileHover={{y: -2}}
@@ -64,7 +64,7 @@ const Navbar = () => {
         whileTap={{scale: 0.9}}
         className="w-6 mx-3"
         >
-          <PinterestIcon />
+          <img src="/medium.svg" alt="X" />
         </motion.a>
         <motion.a href="google.com" target="_blank"
         whileHover={{y: -2}}
