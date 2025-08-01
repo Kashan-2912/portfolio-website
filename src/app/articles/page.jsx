@@ -10,7 +10,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 
 const Article = ({ img, title, time, summary, link, categories }) => {
   return (
-    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
+    <li className="relative flex flex-col justify-between col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] rounded-br-3xl bg-dark" />
       <Link
         href={link}

@@ -10,6 +10,15 @@
   --color-primary-dark: #58E6D9;
 }
 
+/* .dark {
+  --background: #1b1b1b;
+  --foreground: #f5f5f5;
+  --color-dark: #ffffff;
+  --color-light: #171717;
+  --color-primary: #58E6D9;
+  --color-primary-dark: #B63E96;
+} */
+
 @layer utilities {
   .bg-circular-light {
     background-image: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px, #f5f5f5 5px, #f5f5f5 100px);
@@ -17,7 +26,6 @@
     background-position: center;
   }
 }
-
 
 @theme inline {
   --color-background: var(--background);
