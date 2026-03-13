@@ -1,22 +1,16 @@
 import React from 'react'
-import Layout from './Layout'
 import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className='w-full border-t-2 border-solid border-dark font-medium text-lg'>
-        <Layout className={"py-8 !flex items-center justify-between"}>
+    <footer className='w-full border-t-2 border-solid border-dark dark:border-light font-medium text-sm sm:text-base lg:text-lg dark:text-light'>
+        <div className='py-6 sm:py-8 px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0'>
             <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
             <div className='flex items-center'>
-              Built with <span className='text-primary text-2xl px-1'>&#9825;</span>by&nbsp;
-              <Link href={"https://bento.me/kashan-ashraf"} target='_blank'
-              className='underline underline-offset-2'
-              >
-                Kashan
-              </Link>&nbsp;🔥
+              Built with <span className='text-primary dark:text-primary-dark text-xl sm:text-2xl px-1'>&#9825;</span>by&nbsp;Kashan
             </div>
-            <Link href={"/"} className='underline underline-offset-2' target='_blank'>Say Hello</Link>
-        </Layout>
+            <Link href={"mailto:mkashan2912@gmail.com"} className='underline underline-offset-2'>Say Hello</Link>
+        </div>
     </footer>
   )
 }

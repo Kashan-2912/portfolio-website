@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Skill = ({ name, x, y }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full bg-dark text-light font-semibold py-3 px-6 shadow-dark cursor-pointer absolute"
+      className="flex items-center justify-center rounded-full bg-dark text-light dark:bg-light dark:text-dark font-semibold py-2 px-4 text-xs sm:text-sm lg:text-base sm:py-3 sm:px-6 shadow-dark cursor-pointer absolute"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
       whileInView={{ x, y }}
@@ -46,11 +46,11 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center">Skills</h2>
+      <h2 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-32 sm:mt-48 lg:mt-64 w-full text-center">Skills</h2>
 
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circular-light">
+      <div className="w-full h-[60vh] sm:h-[70vh] lg:h-screen relative flex items-center justify-center rounded-full bg-circular-light dark:bg-circular-dark">
         <motion.div
-          className="flex items-center justify-center rounded-full bg-dark text-light font-semibold p-5 shadow-dark cursor-pointer"
+          className="flex items-center justify-center rounded-full bg-dark text-light dark:bg-light dark:text-dark font-semibold p-3 sm:p-4 lg:p-5 shadow-dark cursor-pointer text-xs sm:text-sm lg:text-base"
           whileHover={{ scale: 1.05 }}
         >
           Web Dev
@@ -60,8 +60,6 @@ const Skills = () => {
           <Skill key={index} name={skill.name} x={skill.x} y={skill.y} />
         ))}
       </div>
-
-      {/* more skills ... */}
     </>
   );
 };
