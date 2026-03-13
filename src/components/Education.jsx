@@ -9,7 +9,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[80%] sm:w-[70%] lg:w-[60%] mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mb-0 w-full pl-10 sm:pl-16 lg:pl-20 flex flex-col items-start justify-between relative"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -17,12 +17,12 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize text-lg sm:text-xl lg:text-2xl font-bold">{type}</h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 text-sm sm:text-base">
+        <h3 className="capitalize text-base sm:text-lg lg:text-2xl font-bold">{type}</h3>
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75 text-xs sm:text-sm lg:text-base">
           {time} | {place}
         </span>
 
-        <p className="font-medium w-full text-sm sm:text-base">{info}</p>
+        <p className="font-medium w-full text-xs sm:text-sm lg:text-base mt-1">{info}</p>
       </motion.div>
     </li>
   );
@@ -39,13 +39,13 @@ const Education = () => {
     <div className="my-32 sm:my-48 lg:my-64">
       <h2 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-16 sm:mb-24 lg:mb-32 w-full text-center">Education</h2>
 
-      <div ref={ref} className="w-[90%] sm:w-[85%] lg:w-[75%] mx-auto relative">
+      <div ref={ref} className="w-full sm:w-[90%] lg:w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top"
+          className="absolute left-[24px] sm:left-[36px] top-0 w-[3px] sm:w-[4px] h-full bg-dark dark:bg-light origin-top"
         />
 
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between">
           <Details
             type="Bachelor Of Science In Computer Science"
             time="2022-2026"
